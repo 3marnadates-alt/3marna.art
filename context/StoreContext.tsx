@@ -5,51 +5,51 @@ import { Product, StoreSettings } from '../types';
 const DEFAULT_PRODUCTS: Product[] = [
   {
     id: 1,
-    name: 'عجوة المدينة الفاخرة',
-    description: 'تمر العجوة المبارك، يتميز بلونه الأسود الداكن وطعمه المتوازن، غني بالفوائد الصحية.',
-    price: '85 ج.م / كجم',
-    image: 'https://images.unsplash.com/photo-1628157796939-2f52c1e7c5d3?q=80&w=800&auto=format&fit=crop',
+    name: 'تمر عجوة المدينة الفاخرة',
+    description: 'عجوة المدينة الفاخرة السوداء المباركة، تتميز ببنيتها العصرية وطعمها المتوازن، غنية بالفوائد الصحية.
+    price: '185 ج.م / كجم',
+    image: 'https://k.top4top.io/p_3620uu2jh1.png
     category: 'luxury'
   },
   {
     id: 2,
-    name: 'سكري مفتل ملكي',
-    description: 'السكري الملكي بلونه الذهبي وقوامه الهش المكرمل. حلاوة طبيعية تذوب في الفم.',
-    price: '60 ج.م / كجم',
-    image: 'https://images.unsplash.com/photo-1596547609652-9cf5d8d601d5?q=80&w=800&auto=format&fit=crop',
+    name: 'تمر سكري مفتل ملكي',
+    description: 'سكري مفتل ملكي بلونه وقوامه الذهبي الهش المكرمل. حلاوة طبيعية تذوب في الفم',
+    price: '145 ج.م / كجم',
+    image: 'https://b.top4top.io/p_3620moxjm1.png
     category: 'luxury'
   },
   {
     id: 3,
-    name: 'مجدول (جامبو)',
+    name: 'تمر مجدول جامبو',
     description: 'ملك التمور بحجمه الكبير ومذاقه الغني. قوام لحمي ناعم ومذاق يشبه الكراميل، مثالي للضيافة الفاخرة.',
-    price: '95 ج.م / كجم',
-    image: 'https://images.unsplash.com/photo-1596547609673-3c9704259253?q=80&w=800&auto=format&fit=crop',
+    price: '135 ج.م / كجم',
+    image: 'https://b.top4top.io/p_3620jpz1v1.png
     category: 'luxury'
   },
   {
     id: 4,
-    name: 'صقعي فاخر',
-    description: 'تمر الصقعي المميز بتداخل اللونين الأحمر والأشقر، قوام متماسك وحلاوة معتدلة، خيار رائع للمناسبات.',
-    price: '70 ج.م / كجم',
-    image: 'https://images.unsplash.com/photo-1559839656-78cc94b59521?q=80&w=800&auto=format&fit=crop',
-    category: 'luxury'
+    name: 'تمر سكري محشو كاجو',
+    description: 'تمر سكري فاخر محشو كاجو، غني بالفوائد والفيتامينات ومضادات الأكسده، منشط طبيعي.',
+    price: '565 ج.م / كجم',
+    image: 'https://g.top4top.io/p_3620waoxd1.png
+    category: 'stuffed'
   },
   {
     id: 5,
-    name: 'تمور محشية فاخرة',
-    description: 'تمور منتقاة بعناية محشوة بأجود أنواع المكسرات (لوز، فستق، كاجو)، ضيافة استثنائية.',
-    price: '120 ج.م / كجم',
-    image: 'https://images.unsplash.com/photo-1548682979-3112c37e6d0a?q=80&w=800&auto=format&fit=crop',
+    name: 'تمر سكري محشو لوز',
+    description: 'تمر سكري فاخر محشو اللوز، غني بالفيتامينات ومضادات الأكسده، ومولد النار.',
+    price: '565 ج.م / كجم',
+    image: 'https://c.top4top.io/p_3620oq5t81.png
     category: 'stuffed'
   },
   {
     id: 6,
-    name: 'خلاص القصيم',
-    description: 'الخلاص الذهبي المعروف بمذاقه التوفي اللذيذ وقوامه الطري، رفيق القهوة العربية الأول.',
-    price: '55 ج.م / كجم',
-    image: 'https://images.unsplash.com/photo-1615486511484-92e590508b90?q=80&w=800&auto=format&fit=crop',
-    category: 'daily'
+    name: 'تمر سكري ملكي محشو بندق',
+    description: 'تمر سكري ملكي محشو بندق ومغلف بالشوكولاتة البيضاء، غني بالفيتامينات ومضادات الأكسده، ومولد للطاقة ومنشط طبيعي.',
+    price: '665 ج.م / كجم',
+    image: 'https://i.top4top.io/p_3620e2twa1.png
+    category: 'stuffed'
   }
 ];
 
@@ -67,7 +67,7 @@ const DEFAULT_SETTINGS: StoreSettings = {
     mansoura: 90,
     others: 100
   },
-  discountPercentage: 0,
+  discountPercentage: 25,
   isDiscountActive: false
 };
 

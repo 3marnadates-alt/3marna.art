@@ -1,8 +1,11 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { RecipeRequest, RecipeResponse } from "../types";
 
-// Use process.env.API_KEY as requested for secure deployment
+// Load API key from Vite env
 const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+
+console.log("VITE_GEMINI_API_KEY in browser:", apiKey);
+
 if (!apiKey) {
   throw new Error("VITE_GEMINI_API_KEY is missing");
 }
@@ -25,28 +28,29 @@ export const generateDateRecipe = async (request: RecipeRequest): Promise<Recipe
       model: model,
       contents: prompt,
       config: {
-        systemInstruction: "You are a professional gourmet chef specializing in Middle Eastern sweets and dates. You speak fluent, appetizing Arabic.",
+        systemInstruction:
+          "You are a professional gourmet chef specializing in Middle Eastern sweets and dates. You speak fluent, appetizing Arabic.",
         responseMimeType: "application/json",
         responseSchema: {
           type: Type.OBJECT,
           properties: {
             title: { type: Type.STRING, description: "The name of the recipe in Arabic" },
             description: { type: Type.STRING, description: "A short, appetizing description in Arabic" },
-            ingredients: { 
-              type: Type.ARRAY, 
+            ingredients: {
+              type: Type.ARRAY,
               items: { type: Type.STRING },
-              description: "List of ingredients with quantities in Arabic"
+              description: "List of ingredients with quantities in Arabic",
             },
-            instructions: { 
-              type: Type.ARRAY, 
+            instructions: {
+              type: Type.ARRAY,
               items: { type: Type.STRING },
-              description: "Step by step instructions in Arabic"
+              description: "Step by step instructions in Arabic",
             },
-            prepTime: { type: Type.STRING, description: "Preparation time in Arabic (e.g., 15 دقيقة)" }
+            prepTime: { type: Type.STRING, description: "Preparation time in Arabic (e.g., 15 دقيقة)" },
           },
-          required: ["title", "description", "ingredients", "instructions", "prepTime"]
-        }
-      }
+          required: ["title", "description", "ingredients", "instructions", "prepTime"],
+        },
+      },
     });
 
     const text = response.text;
@@ -55,7 +59,6 @@ export const generateDateRecipe = async (request: RecipeRequest): Promise<Recipe
     }
 
     return JSON.parse(text) as RecipeResponse;
-
   } catch (error) {
     console.error("Gemini API Error:", error);
     throw new Error("فشل في توليد الوصفة. يرجى المحاولة مرة أخرى.");
@@ -63,10 +66,13 @@ export const generateDateRecipe = async (request: RecipeRequest): Promise<Recipe
 };
 
 // Chat Bot Service
-export const chatWithTamrHenna = async (userMessage: string, contextData: any, chatHistory: {role: string, parts: {text: string}[]}[]): Promise<string> => {
+export const chatWithTamrHenna = async (
+  userMessage: string,
+  contextData: any,
+  chatHistory: { role: string; parts: { text: string }[] }[]
+): Promise<string> => {
   const model = "gemini-2.5-flash";
 
-  // Prepare system instruction with dynamic store data
   const systemInstruction = `
     أنتِ "تمر حنه"، المساعدة الذكية الودودة لموقع "تمور العمارنة".
     
@@ -101,12 +107,11 @@ export const chatWithTamrHenna = async (userMessage: string, contextData: any, c
       config: {
         systemInstruction: systemInstruction,
       },
-      history: chatHistory
+      history: chatHistory,
     });
 
     const result = await chat.sendMessage({ message: userMessage });
     return result.text;
-
   } catch (error) {
     console.error("Chat Error:", error);
     return "أعتذر، حدثت مشكلة تقنية بسيطة. ممكن تحاول مرة تانية؟ 🌴";

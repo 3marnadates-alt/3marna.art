@@ -8,7 +8,7 @@ const DEFAULT_PRODUCTS: Product[] = [
     name: 'تمر عجوة المدينة الفاخرة',
     description: 'عجوة المدينة الفاخرة السوداء المباركة، تتميز ببنيتها العصرية وطعمها المتوازن، غنية بالفوائد الصحية.
     price: '185 ج.م / كجم',
-    image: 'https://k.top4top.io/p_3620uu2jh1.png
+    image: 'https://k.top4top.io/p_3620uu2jh1.png'
     category: 'luxury'
   },
   {
@@ -16,7 +16,7 @@ const DEFAULT_PRODUCTS: Product[] = [
     name: 'تمر سكري مفتل ملكي',
     description: 'سكري مفتل ملكي بلونه وقوامه الذهبي الهش المكرمل. حلاوة طبيعية تذوب في الفم',
     price: '145 ج.م / كجم',
-    image: 'https://b.top4top.io/p_3620moxjm1.png
+    image: 'https://b.top4top.io/p_3620moxjm1.png'
     category: 'luxury'
   },
   {
@@ -24,7 +24,7 @@ const DEFAULT_PRODUCTS: Product[] = [
     name: 'تمر مجدول جامبو',
     description: 'ملك التمور بحجمه الكبير ومذاقه الغني. قوام لحمي ناعم ومذاق يشبه الكراميل، مثالي للضيافة الفاخرة.',
     price: '135 ج.م / كجم',
-    image: 'https://b.top4top.io/p_3620jpz1v1.png
+    image: 'https://b.top4top.io/p_3620jpz1v1.png'
     category: 'luxury'
   },
   {
@@ -32,7 +32,7 @@ const DEFAULT_PRODUCTS: Product[] = [
     name: 'تمر سكري محشو كاجو',
     description: 'تمر سكري فاخر محشو كاجو، غني بالفوائد والفيتامينات ومضادات الأكسده، منشط طبيعي.',
     price: '565 ج.م / كجم',
-    image: 'https://g.top4top.io/p_3620waoxd1.png
+    image: 'https://g.top4top.io/p_3620waoxd1.png'
     category: 'stuffed'
   },
   {
@@ -40,7 +40,7 @@ const DEFAULT_PRODUCTS: Product[] = [
     name: 'تمر سكري محشو لوز',
     description: 'تمر سكري فاخر محشو اللوز، غني بالفيتامينات ومضادات الأكسده، ومولد النار.',
     price: '565 ج.م / كجم',
-    image: 'https://c.top4top.io/p_3620oq5t81.png
+    image: 'https://c.top4top.io/p_3620oq5t81.png'
     category: 'stuffed'
   },
   {
@@ -48,7 +48,7 @@ const DEFAULT_PRODUCTS: Product[] = [
     name: 'تمر سكري ملكي محشو بندق',
     description: 'تمر سكري ملكي محشو بندق ومغلف بالشوكولاتة البيضاء، غني بالفيتامينات ومضادات الأكسده، ومولد للطاقة ومنشط طبيعي.',
     price: '665 ج.م / كجم',
-    image: 'https://i.top4top.io/p_3620e2twa1.png
+    image: 'https://i.top4top.io/p_3620e2twa1.png'
     category: 'stuffed'
   }
 ];

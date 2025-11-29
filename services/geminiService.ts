@@ -4,7 +4,6 @@ import { RecipeRequest, RecipeResponse } from "../types";
 // Load API key from Vite env
 const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
 
-console.log("VITE_GEMINI_API_KEY in browser:", apiKey);
 
 if (!apiKey) {
   throw new Error("VITE_GEMINI_API_KEY is missing");

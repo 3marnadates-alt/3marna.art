@@ -2,7 +2,12 @@ import { GoogleGenAI, Type } from "@google/genai";
 import { RecipeRequest, RecipeResponse } from "../types";
 
 // Use process.env.API_KEY as requested for secure deployment
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+if (!apiKey) {
+  throw new Error("VITE_GEMINI_API_KEY is missing");
+}
+
+const ai = new GoogleGenAI({ apiKey });
 
 // Recipe Generator
 export const generateDateRecipe = async (request: RecipeRequest): Promise<RecipeResponse> => {
